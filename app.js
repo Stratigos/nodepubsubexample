@@ -3,8 +3,8 @@
  *  messages in the form of new badges earned from www.codeschool.com, and
  *  sends them to a subsocket.
  *  
- * Uses express (lightweight node 'framework'), axon (message socket library)
- *  ...more tbd
+ * Uses express (lightweight node 'framework'), axon (message socket library),
+ *  underscore (helper library (@see badges.js)), ...more tbd
  *  
  */
 'use strict';
