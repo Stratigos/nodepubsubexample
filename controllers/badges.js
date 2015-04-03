@@ -56,6 +56,6 @@ exports.get = function(req, res, nextFunction) {
         if (err) {
             return res.json(503, {error: true});
         }
-        res.json(200, {error: data});
+        res.json(200, {data: data});
     });
 };
