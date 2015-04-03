@@ -25,6 +25,8 @@ app.post('/', badges.save, badges.send, function(req, res) {
     res.send("\nrequest success, response complete\n\n");
 });
 
+app.get('/', badges.get);
+
 // the following is an example of a view render, if this app were doing
 //  more than parsing JSON.
 // app.post('/', badges.save, badges.send, function(req, res){ // (request, response)

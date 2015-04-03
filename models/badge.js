@@ -45,3 +45,25 @@ exports.send = function(badges, callback) {
     badges.forEach(broadcast.send);
     callback(null, null);
 };
+
+/**
+ * Get badges from redis.
+ * @param {Function} callback
+ */
+exports.get = function(callback) {
+    // select all badges, and pass them up the stack via callback()
+    redis.lrange('badges', 0 -1, function(err, data) {
+        if (err) {
+            // propagate error back up to controller
+            return callback(err, null);
+        }
+        // Below is same as expressing:
+        // ````
+        // data = data.map(function(badge) {
+        //     return JSON.parse(badge);
+        // }
+        // ````
+        // Casts the data from an array of strings into an array of objects.
+        callback(null, data.map(JSON.parse));
+    });
+};
