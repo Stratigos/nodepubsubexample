@@ -4,7 +4,7 @@
  *  sends them to a subsocket.
  *  
  * Uses express (lightweight node 'framework'), axon (message socket library),
- *  underscore (helper library (@see badges.js)), ...more tbd
+ *  underscore (helper library (@see badges.js)), and redis (key val storage).
  *  
  */
 'use strict';
