@@ -25,7 +25,7 @@ app.post('/', badges.save, badges.send, function(req, res) {
     res.send("\nrequest success, response complete\n\n");
 });
 
-app.get('/', badges.get);
+app.get('/badges', badges.get);
 
 // the following is an example of a view render, if this app were doing
 //  more than parsing JSON.
@@ -35,5 +35,5 @@ app.get('/', badges.get);
 
 // listen for requests to this server on port 8000
 app.listen(8000, function() {
-    console.log('Server is listening on port 8000...');
+    console.log('Server is listening on port %d...', 8000);
 });
