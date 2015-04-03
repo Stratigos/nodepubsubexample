@@ -1,4 +1,4 @@
-## Under Construction ##
+### nodejs pubsub socket broadcasting example ###
 
 Example Use:
 
@@ -19,3 +19,10 @@ check by running `redis-cli`
 ````
 LRANGE badges 0 -1
 ````
+
+also check via GET request:
+
+````
+curl http://localhost:8000/badges
+````
+
