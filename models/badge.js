@@ -3,7 +3,7 @@
  */
 'use strict';
 
-var redis = require('redis');
+var redis = require('../lib/redis');
 
 /**
  * Saves array of `badges` to database (Redis)
@@ -12,6 +12,6 @@ var redis = require('redis');
  * @param {Function} callback
  *	Tells evoker of this model method when model is finished.
  */
-exports.save = function(badges, callback){
+exports.save = function(badges, callback) {
 
 };
