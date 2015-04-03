@@ -13,3 +13,9 @@ curl -X POST http://localhost:8000 \
 > -H "content-type: application/json" \
 > -d '[{"badge_id":"foo bar badge"}]'
 ````
+
+check by running `redis-cli`
+
+````
+LRANGE badges 0 -1
+````
