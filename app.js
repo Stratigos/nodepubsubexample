@@ -21,7 +21,9 @@ app.use(express.json());
 //  'badges.save' and 'badges.send' represent middleware and method
 //    (i.e., "controller"."action"). the save() method will be evoked on
 //    request. when save() completes, the request will pass through send().
-app.post('/', badges.save, badges.send);
+app.post('/', badges.save, badges.send, function(req, res) {
+    res.send("\ndone\n\n");
+});
 
 // the following is an example of a view render, if this app were doing
 //  more than parsing JSON.
