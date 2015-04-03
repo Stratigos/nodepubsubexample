@@ -25,3 +25,11 @@ exports.save = function(badges, callback) {
 	});
 
 };
+
+/**
+ * Trim down the redis list. Essentially caps the size of the hash
+ *	stored in `redis-server` to 10 items.
+ */
+ exports.trim = function() {
+ 	redis.ltrim('badges', 0, 9);
+ };

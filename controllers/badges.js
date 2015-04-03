@@ -26,6 +26,12 @@ exports.save = function(req, res, nextFunction) {
         }
         // Continue to next middleware method assigned in app.js route.
         nextFunction();
+        // express allows for async execution, so code after the next route 
+        //  middleware method is called (next() / nextFunction()) can still be
+        //  run (in contrast to a return statement finalizing the method, or 
+        //  the process waiting for nextFunction() to return before proceeding)
+        // trim() caps the size of the hash in redis (@see badge model)
+        model.trim();
     });
 };
 
