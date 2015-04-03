@@ -52,7 +52,7 @@ exports.send = function(badges, callback) {
  */
 exports.get = function(callback) {
     // select all badges, and pass them up the stack via callback()
-    redis.lrange('badges', 0 -1, function(err, data) {
+    redis.lrange('badges', 0, -1, function(err, data) {
         if (err) {
             // propagate error back up to controller
             return callback(err, null);
