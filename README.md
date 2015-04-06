@@ -26,4 +26,5 @@ also check via GET request:
 curl http://localhost:8000/badges
 ````
 
-see revision log for sequential steps to construct this broadcasting server
+@see revision log for sequential steps to construct this broadcasting server
+@see https://github.com/Stratigos/nodepubsubexamplesubscriber for subscription example
