@@ -10,8 +10,8 @@ make request with curl:
 
 ````
 curl -X POST http://localhost:8000 \
-> -H "content-type: application/json" \
-> -d '[{"badge_id":"foo bar badge"}]'
+ -H "content-type: application/json" \
+ -d '[{"badge_id":"foo bar badge"}]'
 ````
 
 check by running `redis-cli`
